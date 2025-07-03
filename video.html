@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XXHULU</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      color: #ff007f;
+      font-size: 24px;
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    nav a:hover {
+      color: #ff007f;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    .container {
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .grid#related,
+      .grid#more-like-this {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border-radius: 6px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+    }
+    .play-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 140px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.3);
+      pointer-events: none;
+    }
+
+    .play-overlay::before {
+      content: '▶';
+      font-size: 20px;
+      color: white;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-title {
+      padding: 10px;
+      font-size: 14px;
+      color: #ff007f;
+    }
+
+    .related-info {
+      font-size: 12px;
+      color: #bbb;
+      padding: 0 10px 10px;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+    .section h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #ff007f;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 13px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #1a1a1a;
+        margin-top: 10px;
+      }
+      nav a {
+        padding: 10px;
+        border-top: 1px solid #333;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>XXX HUB</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="nav-menu">
+      <a href="#">Home</a>
+      <a href="#">Desi</a>
+      <a href="#">College</a>
+      <a href="#">Bhabhi</a>
+      <a href="#">Romance</a>
+      <a href="#">HD</a>
+    </nav>
+  </header>
+
+  <!-- Fullscreen Video -->
+  <div class="video-container">
+    
+    <iframe src="https://www.pornhub.org/embed/67d2285f256db" frameborder="0" width="560" height="340" scrolling="no" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <h2>Related Videos</h2>
+      <div class="grid" id="related"></div>
+    </div>
+
+    <div class="section">
+      <h2>More Like This</h2>
+      <div class="grid" id="more-like-this"></div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 XXX HUB. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-menu").classList.toggle("active");
+    }
+
+    const relatedItems = [
+      { title: "Japanese Beauty's Warm Welcome", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyPZG3we-3buo2IHEWe58SVrFKyRcElO0bPg&s", info: "10min - 720p | 409.6k" },
+      { title: "Romantic Evening with Reo", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrp-7sX1yN5KN6fg6UzrtaMbm9qxE4XUcV2Q&s", info: "10min - 720p | 217.6k" },
+      { title: "Late Night Love Session", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSKRnuNnYHiTBXbAQIVpKKeeccpoF0ySOwRA&s", info: "10min - 720p | 137.6k" },
+      { title: "Charming Encounter with Reo", image: "https://64.media.tumblr.com/tumblr_lz7xciSRUZ1rny3b7o1_r1_500.gif", info: "10min - 720p | 351.1k" },
+      { title: "Romantic Evening with Reo", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5daz84mqReYXa1lNZYwdWhCHkYQMh6KYE0g&s", info: "10min - 720p | 217.6k" },
+      { title: "Japanese Beauty's Warm Welcome", image: "https://porngifs.home.blog/wp-content/uploads/2018/12/image211.jpg", info: "10min - 720p | 409.6k" },
+      { title: "Romantic Evening with Reo", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNLkgACJlhtv6aqRfIovyxCTF-3o1VIKgOgA&s", info: "10min - 720p | 217.6k" }
+    ];
+
+    const moreLikeThisItems = [
+      { title: "Japanese Beauty's Warm Welcome", image: "https://porngifs.home.blog/wp-content/uploads/2018/12/image211.jpg", info: "10min - 720p | 409.6k" },
+      { title: "Romantic Evening with Reo", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNLkgACJlhtv6aqRfIovyxCTF-3o1VIKgOgA&s", info: "10min - 720p | 217.6k" },
+      { title: "Late Night Love Session", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXCkN_3eC_t8uQlRI9A_7XkwJcKd0feEJ7Xw&s", info: "10min - 720p | 137.6k" },
+      { title: "Charming Encounter with Reo", image: "https://el.phncdn.com/gif/37987211.gif", info: "10min - 720p | 351.1k" },
+      { title: "Romantic Evening with Reo", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5daz84mqReYXa1lNZYwdWhCHkYQMh6KYE0g&s", info: "10min - 720p | 217.6k" },
+      { title: "Romantic Evening with Reo", image: "https://xporn-gifs.com/wp-content/uploads/2025/02/Porno-Sexo-Incesto-Pai-e-Filha-Gifs-28455025.gif", info: "10min - 720p | 217.6k" },
+      { title: "Charming Encounter with Reo", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfabgfjCDbbivB7KOf9dzAiBQFKRDilaFGtw&s", info: "10min - 720p | 351.1k" }
+    ];
+
+    function createCard({ title, image, info }) {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="${image}" alt="${title}" />
+        <div class="play-overlay"></div>
+        <div class="card-title">${title}</div>
+        ${info ? `<div class="related-info">${info}</div>` : ""}
+      `;
+      return card;
+    }
+
+    const relatedContainer = document.getElementById('related');
+    relatedItems.forEach(item => {
+      relatedContainer.appendChild(createCard(item));
+    });
+
+    const moreContainer = document.getElementById('more-like-this');
+    moreLikeThisItems.forEach(item => {
+      moreContainer.appendChild(createCard(item));
+    });
+  </script>
+</body>
+</html>
